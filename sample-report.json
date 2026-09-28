@@ -1,0 +1,56 @@
+{
+  "workflows": 1,
+  "references": [
+    {
+      "chain": [
+        ".github/workflows/demo.yml",
+        "demo",
+        "actions/checkout@v4"
+      ],
+      "status": "review_runtime",
+      "runtime": "node20",
+      "source": "https://raw.githubusercontent.com/actions/checkout/v4/action.yml"
+    },
+    {
+      "chain": [
+        ".github/workflows/demo.yml",
+        "demo",
+        "actions/checkout@v5"
+      ],
+      "status": "node24",
+      "runtime": "node24",
+      "source": "https://raw.githubusercontent.com/actions/checkout/v5/action.yml"
+    },
+    {
+      "chain": [
+        ".github/workflows/demo.yml",
+        "demo",
+        "anthropics/claude-code-action@v1.0.52"
+      ],
+      "status": "composite",
+      "source": "https://raw.githubusercontent.com/anthropics/claude-code-action/v1.0.52/action.yml"
+    },
+    {
+      "chain": [
+        ".github/workflows/demo.yml",
+        "demo",
+        "anthropics/claude-code-action@v1.0.52",
+        "oven-sh/setup-bun@3d267786b128fe76c2f16a390aa2448b815359f3"
+      ],
+      "status": "review_runtime",
+      "runtime": "node20",
+      "source": "https://raw.githubusercontent.com/oven-sh/setup-bun/3d267786b128fe76c2f16a390aa2448b815359f3/action.yml"
+    }
+  ],
+  "review_count": 2,
+  "unresolved_count": 0,
+  "qualification": "Declaration inventory only; does not prove failure, compatibility or complete runner readiness.",
+  "observed_at_utc": "2026-09-28T18:02:51.766704+00:00",
+  "sample_kind": "Synthetic workflow; real public metadata, no action executed",
+  "source_hashes": {
+    "https://raw.githubusercontent.com/actions/checkout/v4/action.yml": "6188f6991491ed38977347cdaad0b0cd921a6d6232892363c91f433c22954f4f",
+    "https://raw.githubusercontent.com/actions/checkout/v5/action.yml": "d59219cb79590abdb877deaa14e3b65a00c05318bf5a6f3b989b9162b5d08c35",
+    "https://raw.githubusercontent.com/anthropics/claude-code-action/v1.0.52/action.yml": "d800e8f03a3cfda0219fbb74c6d0ac35474f3be820e17a814a3741bef5dab30d",
+    "https://raw.githubusercontent.com/oven-sh/setup-bun/3d267786b128fe76c2f16a390aa2448b815359f3/action.yml": "4dea2c2c0c81b96205316c9f94434634676141af0b23199dd422dd7f1d99fdf4"
+  }
+}
